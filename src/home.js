@@ -4,6 +4,8 @@
 
 // export { printMe };
 
+import './style.css';
+
 function home() {
     const content = document.querySelector('#content');
 
@@ -22,6 +24,8 @@ function home() {
     home.textContent = "home";
     menu.textContent = "menu";
     contact.textContent = "contact";
+
+    menuContainer.classList.add('menu-container');
 }
 
 export { home };
