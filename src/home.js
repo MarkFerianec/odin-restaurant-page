@@ -1,40 +1,19 @@
-// function printMe() {
-//     console.log('test');
-// }
-
-// export { printMe };
-
 import './style.css';
 import coffee from './coffee.jpg';
 
 function home() {
-    const content = document.querySelector('#content');
 
-    content.classList.add('flex-settings');
+    const homeContainer = document.createElement('div');
 
-    // menu bar
-    const menuContainer = document.createElement('div');
+    homeContainer.classList.add('home-container');
 
-    content.appendChild(menuContainer);
+    homeContainer.classList.add('flex-settings');
 
-    const home = document.createElement('div');
-    const menu = document.createElement('div');
-    const contact = document.createElement('div');
+    content.appendChild(homeContainer);
 
-    menuContainer.appendChild(home);
-    menuContainer.appendChild(menu);
-    menuContainer.appendChild(contact);
-
-    home.textContent = "home";
-    menu.textContent = "menu";
-    contact.textContent = "contact";
-
-    menuContainer.classList.add('menu-container');
-
-    // title
     const title = document.createElement('div');
 
-    content.appendChild(title);
+    homeContainer.appendChild(title);
 
     title.textContent = "Lorem Ipsum Restaurant";
 
@@ -43,9 +22,9 @@ function home() {
     // description
     const description = document.createElement('div');
 
-    content.appendChild(description);
+    homeContainer.appendChild(description);
 
-    description.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt tempor libero et bibendum.Donec et nulla sit amet nisi pellentesque tincidunt.Phasellus mattis accumsan auctor.Integer vulputate metus leo, et bibendum nisi pulvinar nec.Aliquam eros magna, tristique vitae sapien ac, dapibus imperdiet lorem.";
+    description.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt tempor libero et bibendum. Donec et nulla sit amet nisi pellentesque tincidunt. Phasellus mattis accumsan auctor. Integer vulputate metus leo, et bibendum nisi pulvinar nec. Aliquam eros magna, tristique vitae sapien ac, dapibus imperdiet lorem.";
 
     description.classList.add('description');
 
@@ -53,13 +32,13 @@ function home() {
     const picture = new Image();
     picture.src = coffee;
 
-    content.appendChild(picture);
+    homeContainer.appendChild(picture);
 
     picture.classList.add('image-settings');
 
     // credit to author of picture (Caleb on Unsplash)
     const photoCredit = document.createElement('p');
-    content.appendChild(photoCredit);
+    homeContainer.appendChild(photoCredit);
     photoCredit.textContent = "Photo by Caleb on Unsplash";
 
     // https://unsplash.com/@calebrussell?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
