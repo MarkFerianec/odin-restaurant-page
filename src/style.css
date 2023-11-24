@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.menu-container {
+.navigation {
     display: flex;
     gap: 3rem;
 }
