@@ -1,6 +1,7 @@
 import { home } from "./home";
 import { menu } from "./menu";
-import './style.css';
+import { contact } from "./contact";
+// import './style.css';
 
 function tabs() {
 
@@ -43,6 +44,13 @@ function tabs() {
     }
 
     menuTab.addEventListener('click', clearAndRenderMenu)
+
+    function clearAndRenderContact() {
+        clear();
+        contact();
+    }
+
+    contactTab.addEventListener('click', clearAndRenderContact);
 
     function clear() {
         const page = document.querySelector('.page');
